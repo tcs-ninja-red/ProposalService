@@ -12,6 +12,7 @@ app.get('/help', (req, res) => {
 		timestamp: new Date().toISOString(),
 		IP: req.ip,
 		URL: req.originalUrl,
+		version: 2.0
 	});
 });
 

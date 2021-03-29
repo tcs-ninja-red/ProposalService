@@ -13,6 +13,7 @@ router.get('/healthcheck', (req, res) => {
 		timestamp: new Date().toLocaleString(),
 		IP: req.ip,
 		URL: req.originalUrl,
+		api_version: 2.0
 	});
 });
 
