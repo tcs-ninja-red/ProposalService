@@ -120,7 +120,6 @@ exports.createProposal = async (req, res, next) => {
         }
 
         proposal.save().then(result => {
-            //console.log(result);
             res.status(httpStatus.CREATED).json({
                 proposal_ref_number: result._id,
                 decision: result.decision,
