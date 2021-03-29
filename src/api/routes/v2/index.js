@@ -1,0 +1,21 @@
+const express = require('express');
+
+// import all the routes here
+const proposalRoute = require('./proposal.route');
+
+const router = express.Router();
+
+//GET v1/healthcheck
+router.get('/healthcheck', (req, res) => {
+	console.log('we are on healthcheck api');
+	res.json({
+		message: 'In Service',
+		timestamp: new Date().toLocaleString(),
+		IP: req.ip,
+		URL: req.originalUrl,
+	});
+});
+
+router.use('/proposals', proposalRoute);
+
+module.exports = router;
