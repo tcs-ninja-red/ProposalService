@@ -18,6 +18,8 @@ steps:
   - --platform
   - managed
   - --allow-unauthenticated
+  - --port
+  - "44302"
 
 images:
 - gcr.io/$PROJECT_ID/proposal-service-v2:$SHORT_SHA
