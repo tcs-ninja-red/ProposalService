@@ -1,4 +1,5 @@
 const express = require('express');
+const { env } = require('../../../constants');
 
 // import all the routes here
 const proposalRoute = require('./proposal.route');
@@ -13,7 +14,8 @@ router.get('/healthcheck', (req, res) => {
 		timestamp: new Date().toLocaleString(),
 		IP: req.ip,
 		URL: req.originalUrl,
-		api_version: "2.0"
+		api_version: "2.0",
+		environment: env
 	});
 });
 

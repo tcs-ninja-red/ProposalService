@@ -1,5 +1,8 @@
 FROM node:13.12.0-alpine as build
 
+# Environment variables
+ENV API_PORT=44202 NODE_ENV=DEV
+
 # Create app directory
 WORKDIR /app
 
@@ -15,7 +18,7 @@ RUN yarn
 # Bundle app source
 COPY . .
 
-EXPOSE 44302
+#EXPOSE 44302
 
 CMD [ "node", "src/app.js" ]
 
