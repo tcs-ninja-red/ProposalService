@@ -10,7 +10,7 @@ steps:
   args:
   - run
   - deploy
-  - proposal-service-v2
+  - proposal-service-v2-dev
   - --image
   - gcr.io/$PROJECT_ID/proposal-service-v2:$COMMIT_SHA
   - --region
@@ -19,7 +19,7 @@ steps:
   - managed
   - --allow-unauthenticated
   - --port
-  - "44302"
+  - "44202"
 
 images:
 - gcr.io/$PROJECT_ID/proposal-service-v2:$COMMIT_SHA
