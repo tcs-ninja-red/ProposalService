@@ -10,7 +10,7 @@ steps:
   args:
   - run
   - deploy
-  - proposal-service-v2-dev
+  - proposal-service-v2
   - --image
   - gcr.io/$PROJECT_ID/proposal-service-v2:$COMMIT_SHA
   - --region

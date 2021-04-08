@@ -1,7 +1,7 @@
 FROM node:13.12.0-alpine as build
 
 # Environment variables
-ENV API_PORT=44202 NODE_ENV=DEV
+ENV API_PORT=44202 NODE_ENV=PROD
 
 # Create app directory
 WORKDIR /app
