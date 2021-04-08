@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { port, env } = require('./constants');
 const app = require('./config/express.config');
 const mongo = require('./dbconnection');
@@ -12,7 +13,8 @@ app.get('/help', (req, res) => {
 		timestamp: new Date().toISOString(),
 		IP: req.ip,
 		URL: req.originalUrl,
-		version: 2.0
+		version: 2.0,
+		environment: env
 	});
 });
 
