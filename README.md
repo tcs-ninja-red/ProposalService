@@ -2,4 +2,4 @@
 Proposal Micro Service
 
 # Build Automation
-Automated continuous deployment using cloudbuild.yaml
+Automated continuous deployment using cloudbuild.yaml.
